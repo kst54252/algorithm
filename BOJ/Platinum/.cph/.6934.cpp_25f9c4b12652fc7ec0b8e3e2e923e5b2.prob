@@ -1,0 +1,1 @@
+{"name":"Local: 6934","url":"c:\\Github\\algorithm\\BOJ\\Platinum\\6934.cpp","tests":[{"id":1772982964025,"input":"4\n1 1\n1 0\n0 1\n0 0","output":"1.41"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Github\\algorithm\\BOJ\\Platinum\\6934.cpp","group":"local","local":true}

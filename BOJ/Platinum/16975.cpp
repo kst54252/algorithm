@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int n, m, k;
+int n, m;
 long long a, b, c, d;
 long long arr[1000001], tree[4000001], lazy[4000001];
 long long in(int s, int e, int node) {
@@ -49,20 +49,22 @@ void update(int s, int e, int node, int l, int r, long long dif) {
 
 int main() {
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    cin >> n >> m >> k;
+    cin >> n;
     for(int i=0;i<n;i++)
         cin >> arr[i];
-
+    cin >> m;
     in(0, n-1, 1);
-    for(int i=0;i<m+k;i++){
-        cin >> a >> b >> c;
+    for(int i=0;i<m;i++){
+        cin >> a;
         if(a == 1){
-            cin >> d;
+            cin >> b >> c >> d;
             
             update(0, n-1, 1, b-1, c-1, d);
         }
-        else
-            cout << sum(0, n-1, 1, b-1, c-1)<<"\n";
+        else{
+            cin >> b;
+            cout << sum(0, n-1, 1, b-1, b-1)<<"\n";
+        }
     }
 
     return 0;

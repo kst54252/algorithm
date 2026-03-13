@@ -1,0 +1,1 @@
+{"name":"Local: 11116","url":"c:\\Github\\algorithm\\BOJ\\Silver\\11116.cpp","tests":[{"id":1773063456612,"input":"2\n4\n17 517 1432 1932\n432 932 1017 1517\n6\n235 451 735 951 2351 2851\n1235 1351 1451 1735 1851 1951","output":"1\n2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Github\\algorithm\\BOJ\\Silver\\11116.cpp","group":"local","local":true}

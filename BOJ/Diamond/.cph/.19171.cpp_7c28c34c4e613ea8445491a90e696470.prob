@@ -1,0 +1,1 @@
+{"name":"Local: 19171","url":"c:\\Github\\algorithm\\BOJ\\Diamond\\19171.cpp","tests":[{"id":1772984371725,"input":"0 0 0\n20 0 0\n10 20 0","output":"37.320508"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Github\\algorithm\\BOJ\\Diamond\\19171.cpp","group":"local","local":true}
