@@ -1,12 +1,18 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
+const int MAX = 1001;
+
 int n,ch;
-string s[1001];
+string s[MAX];
+
 bool COM(string a, string b) {
     if (a == b)
         return 0;
-    string ab = a+b;
-    string ba = b+a;
+
+    string ab = a + b;
+    string ba = b + a;
     if (ab > ba)
         return 1;
     else
@@ -18,7 +24,7 @@ int main() {
 
     cin >> n;
 
-    for (int i=0;i<n;i++) {
+    for (int i = 0; i < n; i++) {
         cin >> s[i];
         if (s[i] != "0")
             ch = 1;
@@ -27,8 +33,8 @@ int main() {
     if (ch == 0)
         cout << 0;
     else {
-        sort(s,s+n,COM);
-        for (int i=0;i<n;i++)
+        sort(s, s + n, COM);
+        for (int i = 0; i < n; i++)
             cout << s[i];
     }
     return 0;
