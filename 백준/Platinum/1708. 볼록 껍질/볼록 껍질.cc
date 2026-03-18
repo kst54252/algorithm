@@ -13,7 +13,7 @@ bool com(POINT &p, POINT &q){
         return p.y < q.y;
     return p.x < q.x;
 }
-bool ccw(const POINT &A, const POINT &B, const POINT &C){
+bool ccw(POINT &A, POINT &B, POINT &C){
     return (1LL * (A.x * B.y + B.x * C.y + C.x * A.y - B.x * A.y - C.x * B.y - A.x * C.y)) > 0;
 }
 int main() {
