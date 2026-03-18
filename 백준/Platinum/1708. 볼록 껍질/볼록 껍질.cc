@@ -3,7 +3,7 @@ using namespace std;
 
 struct POINT{
     long long x, y;
-    int x_d, y_d;
+    long long x_d, y_d;
 }arr[100001];
 
 bool com(POINT &p, POINT &q){
