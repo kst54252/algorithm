@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+typedef long long ll;
 int n,m,ans,a[1001][1001],b[1001][1001],c[1001][1001],d[1001][1001];
 string s;
 int main() {
@@ -21,7 +22,9 @@ int main() {
                         }
             }
             ans=max(ans,d[i][j]);
+            //cout<<d[i][j]<<" ";
         }
+        //cout<<"\n";
     }
     cout<<ans*ans;
     return 0;
