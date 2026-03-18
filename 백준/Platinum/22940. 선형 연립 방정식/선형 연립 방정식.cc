@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
-double a[6][10];
+using namespace std;
+double a[10][10];
+
 int main(){
+    //freopen("input.txt","r",stdin);
 	int n;
 	scanf("%d",&n);
 	for(int i=0;i<n;i++)
