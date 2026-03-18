@@ -43,12 +43,13 @@ int main(){
     sort(v.begin(),v.end());
 
     int vs = v.size();
-    
+
     for(int i=0;i<vs;i++){
+        int a = v[i].second.first, b = v[i].second.second;
         //cout<<v[i].second.first<<" "<<v[i].second.second<<"\n";
-        if(find_root(v[i].second.first)!=find_root(v[i].second.second)){
+        if(find_root(a)!=find_root(b)){
             ans += v[i].first;
-            union_root(v[i].second.first,v[i].second.second);
+            union_root(a, b);
         }
     }
     cout << ans;
