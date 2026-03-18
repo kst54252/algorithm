@@ -5,26 +5,28 @@ using namespace std;
 int main()
 {
     long long mn, mx;
+
 	cin  >> mn >> mx;
 	long long ans = mx - mn + 1;
     vector<bool> v(mx - mn + 1, false);
 	long long i = 2;
 
-	while (i * i <= mx){
+	while (i * i <= mx) {
 
 
-		long long s = mn / (i * i);
+		long long sNum = mn / (i * i);
 
-		if(mn%(i*i) != 0)
-            s++;
+		if (mn % (i * i) != 0)
+            sNum++;
 
 
-		while (s*(i*i)<= mx){
-			if (v[s*(i*i)-mn] == false){
-				v[s*(i*i)-mn] = true;
+		while (sNum * (i * i) <= mx) {
+			if (v[sNum * (i * i) - mn] == false) {
+				v[sNum * (i * i) - mn] = true;
 				ans--;
+
 			}
-			s++;
+			sNum++;
 		}
 		i++;
 	}
