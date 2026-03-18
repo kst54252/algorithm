@@ -1,10 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
+map<string,int> m;
+string s,ss;
+int n, cnt=1;
+vector<string>v;
 int main() {
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int n, cnt=1;
-    string s;
-    vector<string>v;
     cin >> s;
     n = s.size();
     for(int i=1;i<=n;i++)
