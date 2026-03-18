@@ -4,7 +4,8 @@ using namespace std;
 struct POINT{
     long long x, y;
     long long x_d, y_d;
-}arr[100001];
+    POINT(int x1 = 0, int y1 = 0) : x(x1), y(y1), x_d(1), y_d(0){}
+};
 
 bool com(POINT &p, POINT &q){
     if(1LL * p.y_d * q.x_d != 1LL * p.x_d * q.y_d)
@@ -13,17 +14,17 @@ bool com(POINT &p, POINT &q){
         return p.y < q.y;
     return p.x < q.x;
 }
-bool ccw(POINT &A, POINT &B, POINT &C){
-    return (1LL * (A.x * B.y + B.x * C.y + C.x * A.y - B.x * A.y - C.x * B.y - A.x * C.y)) > 0;
+long long ccw(POINT &A, POINT &B, POINT &C){
+    return 1LL * (A.x * B.y + B.x * C.y + C.x * A.y - B.x * A.y - C.x * B.y - A.x * C.y);
 }
+POINT arr[100002];
 int main() {
     ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-    int a, b, n;
+    long long a, b, n;
     cin >> n;
     for(int i=0;i<n;i++){
         cin >> a >> b;
-        arr[i].x = a;
-        arr[i].y = b;
+        arr[i] = POINT(a,b);
     }
     sort(arr, arr+n, com);
 
@@ -45,7 +46,7 @@ int main() {
             s.pop();
             first = s.top();
 
-            if(ccw(arr[first], arr[second], arr[cnt])){
+            if(ccw(arr[first], arr[second], arr[cnt]) > 0){
                 s.push(second);
                 break;
             }
