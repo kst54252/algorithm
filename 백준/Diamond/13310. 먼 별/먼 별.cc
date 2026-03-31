@@ -19,7 +19,7 @@ bool com(const POINT &p, const POINT &q){
 }
 
 int128 ccw(const POINT &A, const POINT &B, const POINT &C){
-    return (int128)A.x * B.y + (int128)B.x * C.y + (int128)C.x * A.y - (int128)B.x * A.y + (int128)C.x * B.y + (int128)A.x * C.y;
+    return (int128)A.x * B.y + (int128)B.x * C.y + (int128)C.x * A.y - (int128)B.x * A.y - (int128)C.x * B.y - (int128)A.x * C.y;
 }
 
 int128 dist(POINT p, POINT q){
@@ -57,7 +57,7 @@ int128 max_dist(long long t, int n){
     s.push_back(0);
     s.push_back(1);
     for (int i=2;i<n;i++){
-        while (s.size() >= 2){
+        while(s.size() >= 2){
             int second = s.back();
             s.pop_back();
             int first = s.back();
